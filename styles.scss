@@ -5,14 +5,100 @@
     list-style: none;
 }
 :root{
-    --color-primary:rgba(0, 0, 0, 0.658);
+    --color-primary:rgb(253, 246, 246);
     --color-secondary:rgb(133, 221, 133);
     --color-black:black;
+    --color-white:white;
 }
 body{
-    background-color: var(--color-primary);
+    background-color: var(--color-black);
     font-family: 'Poppins', sans-serif;
     font-size: 1.1rem;
     color:ivory;
     transition: all .4s ease-out;
+}
+a{
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+    font-family: inherit;
+}
+section{
+    min-height: 100vh;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top:0;
+}
+header{
+    padding: 3rem 18rem;
+    color:var(--color-white);
+    overflow: hidden;
+}
+.section{
+    transform: translateY(-100%);
+    transition: all .4s ease-in-out;
+    background-color:var(--color-white);
+}
+.sec1{
+    display: none;
+    transform: translateY(0) scale(1);
+}
+.sec2{
+    display: none;
+    transform: translateY(0) scale(1);
+}
+.sec3{
+    display: none;
+    transform: translateY(0) scale(1);
+}
+.sec3{
+    display: none;
+    transform: translateY(0) scale(1);
+}
+.sec4{
+    display: none;
+    transform: translateY(0) scale(1);
+}
+.sec5{
+    display: none;
+    transform: translateY(0) scale(1);
+}
+.controls{
+    position: fixed;
+    z-index: 10;
+    top:50%;
+    right:3%;
+    flex-direction: column;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-50%);
+    .active-btn{
+        background-color: rgb(64, 163, 64) !important;
+        transition: all 0.4s ease-in-out;
+        i{
+            color:white !important;
+        }
+    }
+    .control{
+        background-color: grey;
+        padding:1rem;
+        cursor: pointer;
+        width: 55px;
+        height: 55px;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0.7rem 0;
+        border-radius: 50%;
+        i{  
+            font-size: 1.2rem;
+            color: ivory;
+            pointer-events: none;
+        }
+    }
+}
+.control:hover{
+    box-shadow: 0 2px 15px rgb(129, 199, 112) ;
 }
